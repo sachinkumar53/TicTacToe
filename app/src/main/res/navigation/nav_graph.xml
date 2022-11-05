@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/joinRoomFragment2">
+    <fragment
+        android:id="@+id/joinRoomFragment2"
+        android:name="com.sachin.app.tictactoe.ui.JoinRoomFragment"
+        android:label="fragment_join_room"
+        tools:layout="@layout/fragment_join_room">
+        <action
+            android:id="@+id/action_joinRoomFragment2_to_createRoomFragment"
+            app:destination="@id/createRoomFragment" />
+        <action
+            android:id="@+id/action_joinRoomFragment_to_onlineGameActivity"
+            app:destination="@id/onlineGameActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/createRoomFragment"
+        android:name="com.sachin.app.tictactoe.ui.CreateRoomFragment"
+        android:label="fragment_create_room"
+        tools:layout="@layout/fragment_create_room">
+        <argument
+            android:name="roomId"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_createRoomFragment_to_onlineGameActivity"
+            app:destination="@id/onlineGameActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/onlineGameActivity"
+        android:name="com.sachin.app.tictactoe.ui.OnlineGameActivity"
+        android:label="activity_online_game"
+        tools:layout="@layout/activity_online_game" >
+        <argument
+            android:name="roomId"
+            app:argType="integer" />
+        <argument
+            android:name="myRoom"
+            app:argType="boolean" />
+    </activity>
+</navigation>

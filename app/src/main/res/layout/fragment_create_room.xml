@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_launcher_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context=".ui.CreateRoomFragment">
+
+    <TextView
+        android:id="@+id/player_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/x"
+        android:drawablePadding="16dp"
+        android:drawableTint="#fff"
+        android:gravity="center"
+        android:text="Player 1"
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/player_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/o"
+        android:drawablePadding="16dp"
+        android:drawableTint="#fff"
+        android:gravity="center"
+        android:text="Player 2"
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/room_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="56dp"
+        android:background="#EEEEEE"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:textColor="#3d3d3d"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Room Code: 21487" />
+
+</LinearLayout>
